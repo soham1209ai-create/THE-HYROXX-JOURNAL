@@ -1,9 +1,15 @@
 import { Article } from '../types';
 
-export const HERO_ARENA_IMAGE = '/src/assets/images/hero_hyrox_arena_1791426306468.jpg';
-export const RUNNING_TRACK_IMAGE = '/src/assets/images/hyrox_running_track_1791426321960.jpg';
-export const SLED_PUSH_IMAGE = '/src/assets/images/hyrox_sled_push_1791426335272.jpg';
-export const SKIERG_IMAGE = '/src/assets/images/hyrox_skierg_training_1791426346689.jpg';
+export const HERO_ARENA_IMAGE = '/images/hero_hyrox_arena.jpg';
+export const RUNNING_TRACK_IMAGE = '/images/hyrox_running_track.jpg';
+export const SLED_PUSH_IMAGE = '/images/hyrox_sled_push.jpg';
+export const SKIERG_IMAGE = '/images/hyrox_skierg_training.jpg';
+export const NUTRITION_FUEL_IMAGE = '/images/hyrox_nutrition_fuel.jpg';
+export const RECOVERY_MOBILITY_IMAGE = '/images/hyrox_recovery_mobility.jpg';
+export const SHOES_GEAR_IMAGE = '/images/hyrox_shoes_gear.jpg';
+export const ROWING_STATION_IMAGE = '/images/hyrox_rowing_station.jpg';
+export const SANDBAG_LUNGES_IMAGE = '/images/hyrox_sandbag_lunges.jpg';
+export const WALL_BALLS_IMAGE = '/images/hyrox_wall_balls.jpg';
 
 export const ARTICLES: Article[] = [
   {
@@ -21,6 +27,9 @@ export const ARTICLES: Article[] = [
     date: 'Oct 04, 2026',
     readingTime: '9 min read',
     heroImage: HERO_ARENA_IMAGE,
+    metaTitle: 'What Is HYROX? The Complete Beginner Race Guide (2026)',
+    metaDescription: 'An authoritative beginner guide to HYROX: the 8x1km race structure, official division weights, eight workout stations, and training timelines.',
+    primaryKeyword: 'what is hyrox',
     isFeatured: true,
     isEditorsPick: true,
     isTrending: true,
@@ -225,7 +234,10 @@ export const ARTICLES: Article[] = [
     },
     date: 'Sep 28, 2026',
     readingTime: '8 min read',
-    heroImage: SLED_PUSH_IMAGE,
+    heroImage: SKIERG_IMAGE,
+    metaTitle: 'HYROX Workout Plan for Beginners: 4-Week Blueprint',
+    metaDescription: 'Practical 4-week beginner plan balancing Zone 2 running, functional strength, ergometer intervals, and compromised leg endurance.',
+    primaryKeyword: 'hyrox workout plan beginners',
     isFeatured: false,
     isEditorsPick: true,
     isTrending: false,
@@ -352,7 +364,10 @@ export const ARTICLES: Article[] = [
     },
     date: 'Sep 21, 2026',
     readingTime: '7 min read',
-    heroImage: HERO_ARENA_IMAGE,
+    heroImage: WALL_BALLS_IMAGE,
+    metaTitle: 'HYROX vs CrossFit: Key Differences & Comparison (2026)',
+    metaDescription: 'Compare HYROX vs CrossFit: race predictability, aerobic oxidative endurance vs anaerobic power, skill barrier, and athlete suitability.',
+    primaryKeyword: 'hyrox vs crossfit',
     isFeatured: false,
     isEditorsPick: false,
     isTrending: true,
@@ -473,6 +488,9 @@ export const ARTICLES: Article[] = [
     date: 'Sep 15, 2026',
     readingTime: '10 min read',
     heroImage: RUNNING_TRACK_IMAGE,
+    metaTitle: 'How to Train for Your First HYROX Race: 12-Week Framework',
+    metaDescription: 'A step-by-step 12-week HYROX preparation framework covering aerobic base building, station volume, compromised simulations, and taper.',
+    primaryKeyword: 'train for first hyrox race',
     isFeatured: false,
     isEditorsPick: true,
     isTrending: false,
@@ -566,7 +584,10 @@ export const ARTICLES: Article[] = [
     },
     date: 'Sep 09, 2026',
     readingTime: '9 min read',
-    heroImage: SKIERG_IMAGE,
+    heroImage: ROWING_STATION_IMAGE,
+    metaTitle: 'HYROX 8-Week Training Plan: Structured Peak Syllabus',
+    metaDescription: 'Structured 8-week HYROX training plan for intermediate racers aiming for a personal best. Weekly objectives, interval sessions, and deload.',
+    primaryKeyword: 'hyrox 8 week training plan',
     isFeatured: false,
     isEditorsPick: false,
     isTrending: true,
@@ -700,6 +721,9 @@ export const ARTICLES: Article[] = [
     date: 'Sep 02, 2026',
     readingTime: '12 min read',
     heroImage: SLED_PUSH_IMAGE,
+    metaTitle: 'The 8 HYROX Stations Explained: Technique, Pacing & Weights',
+    metaDescription: 'Comprehensive guide to all 8 HYROX workout stations: SkiErg, Sled Push, Sled Pull, Burpee Broad Jumps, Row, Farmers Carry, Lunges, Wall Balls.',
+    primaryKeyword: '8 hyrox stations explained',
     isFeatured: true,
     isEditorsPick: true,
     isTrending: true,
@@ -804,6 +828,9 @@ export const ARTICLES: Article[] = [
     date: 'Aug 26, 2026',
     readingTime: '9 min read',
     heroImage: RUNNING_TRACK_IMAGE,
+    metaTitle: 'How to Improve Your HYROX Running: Compromised Leg Pacing',
+    metaDescription: 'Master compromised running in HYROX. Build your Zone 2 aerobic engine, navigate tight indoor arena turns, and avoid heavy leg burnout.',
+    primaryKeyword: 'improve hyrox running',
     isFeatured: false,
     isEditorsPick: false,
     isTrending: false,
@@ -893,7 +920,10 @@ export const ARTICLES: Article[] = [
     },
     date: 'Aug 19, 2026',
     readingTime: '8 min read',
-    heroImage: HERO_ARENA_IMAGE,
+    heroImage: NUTRITION_FUEL_IMAGE,
+    metaTitle: 'HYROX Nutrition: What to Eat Before, During and After Racing',
+    metaDescription: 'Evidence-based HYROX sports nutrition: carbohydrate loading, 500-800mg sodium electrolyte strategies, and race morning fueling.',
+    primaryKeyword: 'hyrox nutrition',
     isFeatured: false,
     isEditorsPick: false,
     isTrending: false,
@@ -974,7 +1004,10 @@ export const ARTICLES: Article[] = [
     },
     date: 'Aug 11, 2026',
     readingTime: '8 min read',
-    heroImage: SKIERG_IMAGE,
+    heroImage: RECOVERY_MOBILITY_IMAGE,
+    metaTitle: 'HYROX Recovery Guide: Sleep, HRV, Mobility & Tendon Health',
+    metaDescription: 'Essential recovery protocols for hybrid athletes: deep sleep optimization, heart rate variability monitoring, and daily mobility drills.',
+    primaryKeyword: 'hyrox recovery guide',
     isFeatured: false,
     isEditorsPick: false,
     isTrending: false,
@@ -1056,7 +1089,10 @@ export const ARTICLES: Article[] = [
     },
     date: 'Jul 29, 2026',
     readingTime: '7 min read',
-    heroImage: HERO_ARENA_IMAGE,
+    heroImage: SHOES_GEAR_IMAGE,
+    metaTitle: 'Best Shoes and Gear for HYROX: Turf Grip & Running Cushion',
+    metaDescription: 'What to look for in HYROX shoes: rubber outsole turf traction, 4-8mm drop, running cushioning, and race bag essentials.',
+    primaryKeyword: 'best shoes for hyrox',
     isFeatured: false,
     isEditorsPick: false,
     isTrending: false,
@@ -1140,7 +1176,10 @@ export const ARTICLES: Article[] = [
     },
     date: 'Jul 15, 2026',
     readingTime: '11 min read',
-    heroImage: RUNNING_TRACK_IMAGE,
+    heroImage: ROWING_STATION_IMAGE,
+    metaTitle: 'HYROX Race Strategy: How to Pace Every Station & Split',
+    metaDescription: 'Tactical station-by-station pacing playbook: Run 1 negative splitting, unbroken sled push momentum, and Roxzone transit speed.',
+    primaryKeyword: 'hyrox race strategy pacing',
     isFeatured: true,
     isEditorsPick: true,
     isTrending: false,
@@ -1218,7 +1257,10 @@ export const ARTICLES: Article[] = [
     },
     date: 'Jul 04, 2026',
     readingTime: '10 min read',
-    heroImage: HERO_ARENA_IMAGE,
+    heroImage: SANDBAG_LUNGES_IMAGE,
+    metaTitle: '12 Common HYROX Mistakes Beginners Make & How to Avoid Them',
+    metaDescription: 'Sidestep the 12 most frequent HYROX rookie blunders: sprinting the opening run, poor shoe selection, and unpracticed nutrition.',
+    primaryKeyword: 'hyrox mistakes beginners',
     isFeatured: false,
     isEditorsPick: false,
     isTrending: false,

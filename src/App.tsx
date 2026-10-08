@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ARTICLES, HERO_ARENA_IMAGE, RUNNING_TRACK_IMAGE, SLED_PUSH_IMAGE, SKIERG_IMAGE } from './data/articles';
 import { Article, Category } from './types';
+import { updatePageSeo } from './utils/seo';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ArticleCard } from './components/ArticleCard';
@@ -52,6 +53,76 @@ export default function App() {
       console.error(e);
     }
   }, [savedArticleIds]);
+
+  // Synchronize initial URL state & listen to browser back/forward buttons
+  useEffect(() => {
+    const parseUrlAndRoute = () => {
+      const params = new URLSearchParams(window.location.search);
+      const articleSlug = params.get('article');
+      const categoryParam = params.get('category');
+
+      if (articleSlug) {
+        const found = ARTICLES.find((a) => a.slug === articleSlug);
+        if (found) {
+          setSelectedArticle(found);
+          setSelectedCategory(null);
+          return;
+        }
+      }
+
+      if (categoryParam) {
+        setSelectedCategory(categoryParam as Category | 'All');
+        setSelectedArticle(null);
+        return;
+      }
+
+      setSelectedArticle(null);
+      setSelectedCategory(null);
+    };
+
+    parseUrlAndRoute();
+    window.addEventListener('popstate', parseUrlAndRoute);
+    return () => window.removeEventListener('popstate', parseUrlAndRoute);
+  }, []);
+
+  // Update dynamic SEO and browser URL history when state changes
+  useEffect(() => {
+    if (selectedArticle) {
+      const targetQuery = `?article=${selectedArticle.slug}`;
+      if (window.location.search !== targetQuery) {
+        window.history.pushState({ type: 'article', slug: selectedArticle.slug }, '', targetQuery);
+      }
+      updatePageSeo({
+        title: selectedArticle.metaTitle || `${selectedArticle.title} | The HYROX Journal`,
+        description: selectedArticle.metaDescription || selectedArticle.excerpt,
+        canonicalPath: `/article/${selectedArticle.slug}`,
+        image: selectedArticle.heroImage,
+        type: 'article',
+        articleData: selectedArticle,
+      });
+    } else if (selectedCategory) {
+      const targetQuery = `?category=${encodeURIComponent(selectedCategory)}`;
+      if (window.location.search !== targetQuery) {
+        window.history.pushState({ type: 'category', cat: selectedCategory }, '', targetQuery);
+      }
+      updatePageSeo({
+        title: `${selectedCategory} Guides & Training Intelligence | The HYROX Journal`,
+        description: `Comprehensive ${selectedCategory} insights, station breakdowns, and training strategies from The HYROX Journal.`,
+        canonicalPath: `/category/${selectedCategory.toLowerCase().replace(/\s+/g, '-')}`,
+        type: 'website',
+      });
+    } else {
+      if (window.location.search !== '') {
+        window.history.pushState({ type: 'home' }, '', window.location.pathname);
+      }
+      updatePageSeo({
+        title: 'The HYROX Journal – Train Smarter. Race Stronger.',
+        description: 'Premium editorial publication and training authority on HYROX racing, programming, station strategy, nutrition, and recovery.',
+        canonicalPath: '/',
+        type: 'website',
+      });
+    }
+  }, [selectedArticle, selectedCategory]);
 
   const toggleSaveArticle = (articleId: string) => {
     setSavedArticleIds((prev) =>

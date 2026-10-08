@@ -48,6 +48,9 @@ export interface Article {
   faq: ArticleFAQ[];
   relatedSlugs: string[];
   sources?: ArticleSource[];
+  metaTitle?: string;
+  metaDescription?: string;
+  primaryKeyword?: string;
 }
 
 export interface TrainingLevelInput {
