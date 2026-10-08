@@ -1,0 +1,6 @@
+{
+  "name": "The HYROX Journal",
+  "description": "Premium editorial publication and training authority on HYROX racing, programming, station strategy, nutrition, and recovery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
