@@ -57,9 +57,25 @@ export default function App() {
   // Synchronize initial URL state & listen to browser back/forward buttons
   useEffect(() => {
     const parseUrlAndRoute = () => {
+      const pathname = window.location.pathname;
       const params = new URLSearchParams(window.location.search);
-      const articleSlug = params.get('article');
-      const categoryParam = params.get('category');
+      const hash = window.location.hash;
+
+      // 1. Resolve short article slug from pathname (/article/pacing or /pacing), query (?article=pacing, ?p=pacing), or hash
+      let articleSlug = params.get('article') || params.get('p');
+      if (!articleSlug) {
+        const pathMatch = pathname.match(/^\/(?:article\/)?([a-z0-9-]+)$/i);
+        if (pathMatch && pathMatch[1] && pathMatch[1] !== 'article' && pathMatch[1] !== 'category') {
+          const candidate = pathMatch[1].toLowerCase();
+          if (ARTICLES.some((a) => a.slug === candidate)) {
+            articleSlug = candidate;
+          }
+        }
+      }
+      if (!articleSlug && hash) {
+        const hashMatch = hash.match(/^#\/?(?:article\/)?([a-z0-9-]+)$/i);
+        if (hashMatch) articleSlug = hashMatch[1].toLowerCase();
+      }
 
       if (articleSlug) {
         const found = ARTICLES.find((a) => a.slug === articleSlug);
@@ -70,10 +86,25 @@ export default function App() {
         }
       }
 
-      if (categoryParam) {
-        setSelectedCategory(categoryParam as Category | 'All');
-        setSelectedArticle(null);
-        return;
+      // 2. Resolve category from pathname (/category/training) or params
+      let catParam = params.get('category') || params.get('c');
+      if (!catParam) {
+        const catMatch = pathname.match(/^\/category\/([a-z0-9-]+)$/i);
+        if (catMatch) catParam = catMatch[1];
+      }
+      if (catParam) {
+        const validCategories: (Category | 'All')[] = [
+          'HYROX 101', 'Training', 'Race Strategy', 'Nutrition', 'Recovery',
+          'Gear', 'Running', 'Workouts', 'Race Guides', 'Athlete Stories', 'All'
+        ];
+        const foundCat = validCategories.find(
+          (c) => c.toLowerCase().replace(/\s+/g, '-') === catParam?.toLowerCase() || c.toLowerCase() === catParam?.toLowerCase()
+        );
+        if (foundCat) {
+          setSelectedCategory(foundCat);
+          setSelectedArticle(null);
+          return;
+        }
       }
 
       setSelectedArticle(null);
@@ -85,12 +116,12 @@ export default function App() {
     return () => window.removeEventListener('popstate', parseUrlAndRoute);
   }, []);
 
-  // Update dynamic SEO and browser URL history when state changes
+  // Update dynamic SEO and short browser URL history when state changes
   useEffect(() => {
     if (selectedArticle) {
-      const targetQuery = `?article=${selectedArticle.slug}`;
-      if (window.location.search !== targetQuery) {
-        window.history.pushState({ type: 'article', slug: selectedArticle.slug }, '', targetQuery);
+      const targetPath = `/article/${selectedArticle.slug}`;
+      if (window.location.pathname !== targetPath) {
+        window.history.pushState({ type: 'article', slug: selectedArticle.slug }, '', targetPath);
       }
       updatePageSeo({
         title: selectedArticle.metaTitle || `${selectedArticle.title} | The HYROX Journal`,
@@ -101,19 +132,20 @@ export default function App() {
         articleData: selectedArticle,
       });
     } else if (selectedCategory) {
-      const targetQuery = `?category=${encodeURIComponent(selectedCategory)}`;
-      if (window.location.search !== targetQuery) {
-        window.history.pushState({ type: 'category', cat: selectedCategory }, '', targetQuery);
+      const catSlug = selectedCategory.toLowerCase().replace(/\s+/g, '-');
+      const targetPath = `/category/${catSlug}`;
+      if (window.location.pathname !== targetPath) {
+        window.history.pushState({ type: 'category', cat: selectedCategory }, '', targetPath);
       }
       updatePageSeo({
         title: `${selectedCategory} Guides & Training Intelligence | The HYROX Journal`,
         description: `Comprehensive ${selectedCategory} insights, station breakdowns, and training strategies from The HYROX Journal.`,
-        canonicalPath: `/category/${selectedCategory.toLowerCase().replace(/\s+/g, '-')}`,
+        canonicalPath: `/category/${catSlug}`,
         type: 'website',
       });
     } else {
-      if (window.location.search !== '') {
-        window.history.pushState({ type: 'home' }, '', window.location.pathname);
+      if (window.location.pathname !== '/' && window.location.pathname !== '') {
+        window.history.pushState({ type: 'home' }, '', '/');
       }
       updatePageSeo({
         title: 'The HYROX Journal – Train Smarter. Race Stronger.',
@@ -145,7 +177,7 @@ export default function App() {
   };
 
   const handleStartHere = () => {
-    const beginnerGuide = ARTICLES.find((a) => a.slug === 'what-is-hyrox-beginners-guide');
+    const beginnerGuide = ARTICLES.find((a) => a.slug === 'what-is-hyrox');
     if (beginnerGuide) {
       setSelectedArticle(beginnerGuide);
     } else {
@@ -257,7 +289,7 @@ export default function App() {
                     </div>
                     <div className="w-px h-7 bg-white/10" />
                     <div>
-                      <span className="font-mono-nums font-bold text-white text-base block">12 Guides</span>
+                      <span className="font-mono-nums font-bold text-white text-base block">10 Guides</span>
                       <span>Full Curriculum</span>
                     </div>
                     <div className="w-px h-7 bg-white/10" />
@@ -307,7 +339,7 @@ export default function App() {
                   onClick={() => setSelectedCategory('All')}
                   className="text-xs font-semibold uppercase tracking-wider text-zinc-400 hover:text-[#FFE600] flex items-center gap-1 transition-colors cursor-pointer"
                 >
-                  <span>View All 12 Articles</span>
+                  <span>View All 10 Articles</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -338,7 +370,7 @@ export default function App() {
                   {/* Card 1: HYROX 101 */}
                   <div
                     onClick={() => {
-                      const art = ARTICLES.find((a) => a.slug === 'what-is-hyrox-beginners-guide');
+                      const art = ARTICLES.find((a) => a.slug === 'what-is-hyrox');
                       if (art) handleSelectArticle(art);
                     }}
                     className="group bg-[#121418] border border-white/10 hover:border-white/25 rounded-2xl p-6 sm:p-8 cursor-pointer transition-all flex flex-col justify-between"
@@ -363,7 +395,7 @@ export default function App() {
                   {/* Card 2: Training */}
                   <div
                     onClick={() => {
-                      const art = ARTICLES.find((a) => a.slug === 'hyrox-workout-plan-for-beginners');
+                      const art = ARTICLES.find((a) => a.slug === 'workout-plan');
                       if (art) handleSelectArticle(art);
                     }}
                     className="group bg-[#121418] border border-white/10 hover:border-white/25 rounded-2xl p-6 sm:p-8 cursor-pointer transition-all flex flex-col justify-between"
@@ -377,7 +409,7 @@ export default function App() {
                         Training
                       </h3>
                       <p className="text-zinc-400 text-xs sm:text-sm leading-relaxed mb-6">
-                        Adopt a 4-week or 8-week structured training cycle. Build your aerobic running engine in Zone 2 and adapt to running on heavy quadriceps.
+                        Adopt a 4-week structured training cycle. Build your aerobic running engine in Zone 2 and adapt to running on heavy quadriceps.
                       </p>
                     </div>
                     <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FFE600] group-hover:translate-x-1 transition-transform">
@@ -388,7 +420,7 @@ export default function App() {
                   {/* Card 3: Race Day */}
                   <div
                     onClick={() => {
-                      const art = ARTICLES.find((a) => a.slug === 'hyrox-race-strategy-how-to-pace-every-station');
+                      const art = ARTICLES.find((a) => a.slug === 'pacing');
                       if (art) handleSelectArticle(art);
                     }}
                     className="group bg-[#121418] border border-white/10 hover:border-white/25 rounded-2xl p-6 sm:p-8 cursor-pointer transition-all flex flex-col justify-between"
@@ -496,11 +528,11 @@ export default function App() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
                   {[
-                    { title: 'Running Engine', desc: 'Zone 2 volume, interval thresholds, and compromised leg turnover.', slug: 'how-to-improve-your-hyrox-running' },
-                    { title: 'Posterior Strength', desc: 'Trap bar pulls, front squats, and suitcase grip density.', slug: 'hyrox-workout-plan-for-beginners' },
-                    { title: 'Sled Biomechanics', desc: 'Traction angles, momentum physics, and continuous cadence.', slug: 'the-8-hyrox-stations-explained' },
-                    { title: 'Ergometer Pacing', desc: 'SkiErg whole-body hinge and Concept2 rowing stroke efficiency.', slug: 'hyrox-8-week-training-plan' },
-                    { title: 'Hybrid Workouts', desc: 'Multi-modality brick simulations matching race intensity.', slug: 'how-to-train-for-your-first-hyrox-race' },
+                    { title: 'Running Engine', desc: 'Zone 2 volume, interval thresholds, and compromised leg turnover.', slug: 'running' },
+                    { title: 'Posterior Strength', desc: 'Trap bar pulls, front squats, and suitcase grip density.', slug: 'workout-plan' },
+                    { title: 'Sled Biomechanics', desc: 'Traction angles, momentum physics, and continuous cadence.', slug: 'stations' },
+                    { title: 'Ergometer Pacing', desc: 'SkiErg whole-body hinge and Concept2 rowing stroke efficiency.', slug: 'stations' },
+                    { title: 'Hybrid Workouts', desc: 'Multi-modality brick simulations matching race intensity.', slug: 'workout-plan' },
                   ].map((pillar, i) => (
                     <div
                       key={i}
@@ -550,11 +582,11 @@ export default function App() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                 {[
-                  { title: 'Even Pacing', desc: 'Avoiding the Run 1 adrenaline trap to preserve glycogen.', slug: 'hyrox-race-strategy-how-to-pace-every-station' },
-                  { title: 'Fast Transitions', desc: 'Saving 3 to 5 minutes by optimizing your Roxzone transits.', slug: '12-common-hyrox-mistakes-beginners-make' },
-                  { title: 'Cornering Strategy', desc: 'Taking tight indoor arena turns without kinetic energy loss.', slug: 'how-to-improve-your-hyrox-running' },
-                  { title: 'Station Tactics', desc: 'Unbroken sleds and pre-scheduled wall ball rep schemes.', slug: 'the-8-hyrox-stations-explained' },
-                  { title: 'Race-Day Warmup', desc: 'Warming up without burning high-intensity glycogen before Start Corral.', slug: 'how-to-train-for-your-first-hyrox-race' },
+                  { title: 'Even Pacing', desc: 'Avoiding the Run 1 adrenaline trap to preserve glycogen.', slug: 'pacing' },
+                  { title: 'Fast Transitions', desc: 'Saving 3 to 5 minutes by optimizing your Roxzone transits.', slug: 'mistakes' },
+                  { title: 'Cornering Strategy', desc: 'Taking tight indoor arena turns without kinetic energy loss.', slug: 'running' },
+                  { title: 'Station Tactics', desc: 'Unbroken sleds and pre-scheduled wall ball rep schemes.', slug: 'stations' },
+                  { title: 'Race-Day Warmup', desc: 'Warming up without burning high-intensity glycogen before Start Corral.', slug: 'pacing' },
                 ].map((strat, i) => (
                   <div
                     key={i}
@@ -617,19 +649,19 @@ export default function App() {
                       category: 'Nutrition',
                       title: 'Pre-Race & Training Nutrition',
                       desc: '5-7g carbs per kg bodyweight, optimal meal timings, and avoiding gastrointestinal issues during high-intensity runs.',
-                      slug: 'hyrox-nutrition-pre-during-post',
+                      slug: 'nutrition',
                     },
                     {
                       category: 'Hydration',
                       title: 'Sodium & Electrolyte Strategy',
                       desc: 'Compensating for high arena sweat rates with 500-800mg sodium per liter to prevent catastrophic quad cramping.',
-                      slug: 'hyrox-nutrition-pre-during-post',
+                      slug: 'nutrition',
                     },
                     {
                       category: 'Recovery',
                       title: 'Sleep, HRV & Tendon Longevity',
                       desc: 'Managing autonomic nervous system fatigue, slow-wave sleep cycles, and protecting patellar tendons from impact.',
-                      slug: 'hyrox-recovery-guide',
+                      slug: 'recovery',
                     },
                   ].map((card, idx) => (
                     <div

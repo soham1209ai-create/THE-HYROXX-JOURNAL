@@ -14,7 +14,7 @@ export const WALL_BALLS_IMAGE = '/images/hyrox_wall_balls.jpg';
 export const ARTICLES: Article[] = [
   {
     id: 'art-1',
-    slug: 'what-is-hyrox-beginners-guide',
+    slug: 'what-is-hyrox',
     title: 'What Is HYROX? The Complete Beginner’s Guide',
     subtitle: 'Everything you need to know about race format, the eight stations, divisions, and preparation standards.',
     category: 'HYROX 101',
@@ -44,7 +44,7 @@ export const ARTICLES: Article[] = [
       { id: 'common-pitfalls', text: '7. Beginner Pitfalls to Avoid' },
     ],
     content: `
-      <p class="lead">Founded in Germany in 2017 by race director Christian Toetzke and Olympic hockey gold medalist Moritz Fürste, HYROX was engineered around a simple premise: create the world’s first mass-participation indoor fitness race where every athlete on Earth completes the identical test.</p>
+      <p class="lead">Founded in Germany in 2017 by race director Christian Toetzke and Olympic hockey gold medalist Moritz Fürste, HYROX was engineered around a simple premise as codified in the <a href="https://hyrox.com/the-fitness-race/" target="_blank" rel="noopener noreferrer">official HYROX Rulebook and competition standards</a>: create the world’s first mass-participation indoor fitness race where every athlete on Earth completes the identical test.</p>
 
       <h2 id="origin-format">1. What Is HYROX & How Does It Work?</h2>
       <p>Unlike traditional CrossFit competitions where workouts are announced minutes before "3-2-1 Go", HYROX is standardized. The race never changes. Whether you compete in Manchester, Chicago, Sydney, or Vienna, the order of events, distances, and movement criteria are 100% constant. This consistency allows athletes to track global rankings, benchmark seasonal progress, and aim for personal bests in the exact manner marathoners measure 42.195 kilometers.</p>
@@ -210,19 +210,19 @@ export const ARTICLES: Article[] = [
       },
     ],
     relatedSlugs: [
-      'the-8-hyrox-stations-explained',
-      'hyrox-workout-plan-for-beginners',
-      'how-to-train-for-your-first-hyrox-race',
-      '12-common-hyrox-mistakes-beginners-make',
+      'stations',
+      'workout-plan',
+      'pacing',
+      'mistakes',
     ],
     sources: [
-      { title: 'HYROX Official Rulebook & Competition Standards (2025/2026 Season)' },
-      { title: 'Concept2 Indoor Performance Diagnostics & Damper Calibration Standards' },
+      { title: 'HYROX Official Rulebook & Competition Standards', url: 'https://hyrox.com/the-fitness-race/' },
+      { title: 'Concept2 Indoor Performance Diagnostics & Damper Calibration Standards', url: 'https://www.concept2.com/skierg' },
     ],
   },
   {
     id: 'art-2',
-    slug: 'hyrox-workout-plan-for-beginners',
+    slug: 'workout-plan',
     title: 'HYROX Workout Plan for Beginners',
     subtitle: 'A progressive 4-week blueprint balancing aerobic base building, compromised running, and station resilience.',
     category: 'Workouts',
@@ -253,7 +253,7 @@ export const ARTICLES: Article[] = [
       <p class="lead">Preparing for your first HYROX requires a paradigm shift. Traditional gym splits (chest on Monday, legs on Tuesday) fail to prepare the cardiovascular system for the relentless demand of running on heavily fatigued quadriceps.</p>
 
       <h2 id="framework">1. The Beginner Training Framework</h2>
-      <p>For a beginner, the training load must balance three distinct pillars:</p>
+      <p>Grounded in the <a href="https://www.acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines" target="_blank" rel="noopener noreferrer">American College of Sports Medicine (ACSM) conditioning guidelines</a>, the beginner training load must balance three distinct pillars:</p>
       <ul>
         <li><strong>Aerobic Endurance (45%):</strong> Conversational Zone 2 running to build mitochondrial density and stroke volume.</li>
         <li><strong>Functional Strength (30%):</strong> Posterior chain, grip endurance, knee extension power, and core bracing.</li>
@@ -340,19 +340,19 @@ export const ARTICLES: Article[] = [
       },
     ],
     relatedSlugs: [
-      'what-is-hyrox-beginners-guide',
-      'how-to-improve-your-hyrox-running',
-      'the-8-hyrox-stations-explained',
-      'hyrox-8-week-training-plan',
+      'what-is-hyrox',
+      'running',
+      'stations',
+      'pacing',
     ],
     sources: [
-      { title: 'American College of Sports Medicine (ACSM) Endurance Conditioning Guidelines' },
-      { title: 'Seiler, S. (2010). What is best practice for training intensity distribution in endurance athletes?' },
+      { title: 'American College of Sports Medicine (ACSM) Endurance Conditioning Guidelines', url: 'https://www.acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines' },
+      { title: 'Seiler, S. (2010). What is best practice for training intensity distribution in endurance athletes?', url: 'https://pubmed.ncbi.nlm.nih.gov/20840567/' },
     ],
   },
   {
     id: 'art-3',
-    slug: 'hyrox-vs-crossfit-differences',
+    slug: 'hyrox-vs-crossfit',
     title: 'HYROX vs CrossFit: What’s the Difference?',
     subtitle: 'A detailed breakdown of competition formats, movement complexity, aerobic demands, and athlete profiles.',
     category: 'HYROX 101',
@@ -383,7 +383,7 @@ export const ARTICLES: Article[] = [
       <p class="lead">Both CrossFit and HYROX celebrate high-intensity functional conditioning, but stepping onto a HYROX race floor feels entirely distinct from standing in the corral of a CrossFit throwdown.</p>
 
       <h2 id="core-philosophies">1. The Core Philosophies</h2>
-      <p>CrossFit is rooted in "constantly varied, functional movements performed at high intensity." Its objective is generalized physical preparedness (GPP). You might be asked to perform a 1-rep max snatch, followed the next day by 50 muscle-ups and handstand obstacle courses. The unknown and unknowable is central to its test.</p>
+      <p>CrossFit is rooted in <a href="https://www.crossfit.com/what-is-crossfit" target="_blank" rel="noopener noreferrer">constantly varied, functional movements performed at high intensity</a> Its objective is generalized physical preparedness (GPP). You might be asked to perform a 1-rep max snatch, followed the next day by 50 muscle-ups and handstand obstacle courses. The unknown and unknowable is central to its test.</p>
 
       <p>HYROX, by contrast, is a standardized endurance race. It is the functional fitness equivalent of a marathon or half-Ironman. The distance is set, the movements never alter, and pacing economy across 60 to 90 minutes determines victory.</p>
 
@@ -463,252 +463,19 @@ export const ARTICLES: Article[] = [
       },
     ],
     relatedSlugs: [
-      'what-is-hyrox-beginners-guide',
-      'how-to-train-for-your-first-hyrox-race',
-      'the-8-hyrox-stations-explained',
-      'how-to-improve-your-hyrox-running',
+      'what-is-hyrox',
+      'workout-plan',
+      'stations',
+      'running',
     ],
     sources: [
-      { title: 'Glassman, G. (2002). What Is Fitness? CrossFit Journal.' },
-      { title: 'HYROX Official Technical Regulations.' },
+      { title: 'Glassman, G. (2002). What Is Fitness? CrossFit Journal', url: 'https://www.crossfit.com/what-is-crossfit' },
+      { title: 'HYROX Official Technical Regulations', url: 'https://hyrox.com/the-fitness-race/' },
     ],
   },
   {
     id: 'art-4',
-    slug: 'how-to-train-for-your-first-hyrox-race',
-    title: 'How to Train for Your First HYROX Race',
-    subtitle: 'A 12-week preparation framework from initial aerobic assessment to race simulation and taper.',
-    category: 'Training',
-    tags: ['Training Guide', '12-Week Framework', 'First Race', 'Pacing', 'Simulation'],
-    excerpt: 'The complete periodization framework for first-time racers. Master running base building, station mechanics, pacing discipline, and race simulations.',
-    author: {
-      name: 'Julian Mercer',
-      role: 'Master Endurance & HYROX Coach',
-    },
-    date: 'Sep 15, 2026',
-    readingTime: '10 min read',
-    heroImage: RUNNING_TRACK_IMAGE,
-    metaTitle: 'How to Train for Your First HYROX Race: 12-Week Framework',
-    metaDescription: 'A step-by-step 12-week HYROX preparation framework covering aerobic base building, station volume, compromised simulations, and taper.',
-    primaryKeyword: 'train for first hyrox race',
-    isFeatured: false,
-    isEditorsPick: true,
-    isTrending: false,
-    isBeginnerFriendly: true,
-    tableOfContents: [
-      { id: '12-week-phases', text: '1. The 12-Week Periodization Model' },
-      { id: 'phase-1', text: '2. Phase 1 (Weeks 1–4): Aerobic & Structural Base' },
-      { id: 'phase-2', text: '3. Phase 2 (Weeks 5–8): Station Specificity & Strength' },
-      { id: 'phase-3', text: '4. Phase 3 (Weeks 9–11): Compromised Running & Simulations' },
-      { id: 'taper', text: '5. Week 12: The Race-Week Taper' },
-      { id: 'race-simulation-test', text: '6. The Half-Sim Fitness Benchmark' },
-    ],
-    content: `
-      <p class="lead">Stepping across the starting line for your first HYROX can be daunting. With 8 distinct functional stations and 8 separate 1-kilometer running laps, haphazard training will leave you unprepared for the brutal cumulative fatigue of the final 2 kilometers.</p>
-
-      <h2 id="12-week-phases">1. The 12-Week Periodization Model</h2>
-      <p>A successful 12-week preparation is divided into three distinct 4-week training blocks followed by a planned taper:</p>
-      <ul>
-        <li><strong>Phase 1 (Weeks 1–4):</strong> Aerobic Foundation & Movement Proficiency</li>
-        <li><strong>Phase 2 (Weeks 5–8):</strong> Specific Strength & Station Capacity</li>
-        <li><strong>Phase 3 (Weeks 9–11):</strong> Compromised Race-Pace Conditioning</li>
-        <li><strong>Taper (Week 12):</strong> Neural Recovery & Glycogen Optimization</li>
-      </ul>
-
-      <h2 id="phase-1">2. Phase 1 (Weeks 1–4): Aerobic & Structural Base</h2>
-      <p>Your primary goal in Month 1 is building an aerobic gas tank. Most fitness enthusiasts make the mistake of going too fast on their runs. Keep 80% of your weekly running mileage at a low, conversational heart rate (Zone 2). In the gym, emphasize foundational compound lifts: barbell front squats, trap bar deadlifts, overhead presses, and heavy dumbbell suitcase carries.</p>
-
-      <h2 id="phase-2">3. Phase 2 (Weeks 5–8): Station Specificity & Strength</h2>
-      <p>Now introduce exact race movements at competition loads. Learn the biomechanics of the sled push and sled pull. Practice unbroken SkiErg pacing: establish your 500m split pace that keeps your heart rate below 85% of maximum. Add one tempo run per week (e.g., 4 x 1,200m at your targeted HYROX race pace with 90 seconds recovery).</p>
-
-      <h2 id="phase-3">4. Phase 3 (Weeks 9–11): Compromised Running & Simulations</h2>
-      <p>In this critical block, simulate the specific muscular fatigue of race day. A cornerstone workout is the "Brick Station Run":</p>
-      <ul>
-        <li>1,000m Run at race pace</li>
-        <li>50m Sled Push at race weight</li>
-        <li>1,000m Run at race pace (holding strict split times)</li>
-        <li>80m Burpee Broad Jumps</li>
-        <li>1,000m Run at race pace</li>
-        <li>Rest 3 minutes and evaluate lap consistency.</li>
-      </ul>
-
-      <h2 id="taper">5. Week 12: The Race-Week Taper</h2>
-      <p>The hay is in the barn. You cannot gain additional aerobic fitness during race week, but you can easily fatigue your central nervous system. Cut your overall training volume by 50% while maintaining crisp, short movement touches (e.g., 200m SkiErg, 10m sled push) to keep your neuromuscular pathways primed.</p>
-
-      <h2 id="race-simulation-test">6. The Half-Sim Fitness Benchmark</h2>
-      <p>At Week 9, schedule a Half-HYROX simulation: 4 x (1km Run + 1 Station at race standards). Record your total time, multiply by 2.1, and you will have an remarkably accurate projection of your race-day finishing time.</p>
-    `,
-    keyTakeaways: [
-      'Divide your 12-week runway into Aerobic Base, Station Specificity, and Compromised Conditioning.',
-      'Eighty percent of running volume should remain conversational Zone 2 to build mitochondrial base.',
-      'Practice race-weight sled pushes and pulls in training so they do not shock your legs.',
-      'A half-race simulation around Week 9 gives an accurate projection of race-day performance.',
-      'Taper training volume by 50% in race week to ensure full glycogen stores and low neural fatigue.',
-    ],
-    faq: [
-      {
-        question: 'How many days per week should I train for my first race?',
-        answer: 'Four to five days is ideal for most working athletes. This provides two running sessions, two hybrid/strength sessions, and two to three full recovery days.',
-      },
-      {
-        question: 'What if I do not have a sled or turf track?',
-        answer: 'You can replicate sled pushes using high-resistance treadmill pushes (with the motor turned off or at maximum manual incline) or weighted plate pushes on gym mats.',
-      },
-      {
-        question: 'When should I buy my race shoes?',
-        answer: 'Purchase and break in your race shoes at least 6 weeks before race day. Never run in new shoes on competition day.',
-      },
-    ],
-    relatedSlugs: [
-      'hyrox-8-week-training-plan',
-      'hyrox-workout-plan-for-beginners',
-      'how-to-improve-your-hyrox-running',
-      'best-shoes-and-gear-for-hyrox',
-    ],
-    sources: [
-      { title: 'Seiler, S., & Tønnessen, E. (2009). Intervals, Thresholds, and Long Slow Distance: The Role of Intensity and Duration in Endurance Training.' },
-      { title: 'HYROX Academy Coaching Education Manual.' },
-    ],
-  },
-  {
-    id: 'art-5',
-    slug: 'hyrox-8-week-training-plan',
-    title: 'HYROX 8-Week Training Plan',
-    subtitle: 'A structured peak training cycle with weekly objectives, progression milestones, and deload protocols.',
-    category: 'Workouts',
-    tags: ['Training Plan', '8-Week Blueprint', 'Intermediate', 'Progression', 'Workouts'],
-    excerpt: 'An intensive 8-week performance syllabus designed for athletes with an existing fitness baseline looking to peak on race day.',
-    author: {
-      name: 'Julian Mercer',
-      role: 'Master Endurance & HYROX Coach',
-    },
-    date: 'Sep 09, 2026',
-    readingTime: '9 min read',
-    heroImage: ROWING_STATION_IMAGE,
-    metaTitle: 'HYROX 8-Week Training Plan: Structured Peak Syllabus',
-    metaDescription: 'Structured 8-week HYROX training plan for intermediate racers aiming for a personal best. Weekly objectives, interval sessions, and deload.',
-    primaryKeyword: 'hyrox 8 week training plan',
-    isFeatured: false,
-    isEditorsPick: false,
-    isTrending: true,
-    isBeginnerFriendly: false,
-    tableOfContents: [
-      { id: 'plan-overview', text: '1. Plan Overview & Target Athlete' },
-      { id: 'weekly-syllabus', text: '2. The 8-Week Master Curriculum Table' },
-      { id: 'session-breakdowns', text: '3. Key Workout Protocols' },
-      { id: 'managing-intensities', text: '4. Heart Rate Zones & RPE Guidelines' },
-      { id: 'final-peak-taper', text: '5. Peak & Taper Protocol' },
-    ],
-    content: `
-      <p class="lead">If you already possess a baseline of functional fitness and can run 5 kilometers comfortably, an 8-week targeted block is the sweet spot to hone HYROX-specific capacity without risking overtraining.</p>
-
-      <h2 id="plan-overview">1. Plan Overview & Target Athlete</h2>
-      <p>This 8-week curriculum is engineered for intermediate athletes aiming for sub-85 minutes (Men Open) or sub-90 minutes (Women Open). It emphasizes progressive station volume, threshold running mechanics, and race-cadence simulations.</p>
-
-      <h2 id="weekly-syllabus">2. The 8-Week Master Curriculum Table</h2>
-      <div class="overflow-x-auto my-6">
-        <table class="w-full text-left text-sm border-collapse border border-zinc-800">
-          <thead>
-            <tr class="bg-zinc-900 text-zinc-300">
-              <th class="p-3 border border-zinc-800">Week</th>
-              <th class="p-3 border border-zinc-800">Theme</th>
-              <th class="p-3 border border-zinc-800">Running Focus</th>
-              <th class="p-3 border border-zinc-800">HYROX Specific Station Session</th>
-            </tr>
-          </thead>
-          <tbody class="text-zinc-300">
-            <tr>
-              <td class="p-3 border border-zinc-800 font-semibold">Week 1</td>
-              <td class="p-3 border border-zinc-800">Base & Calibration</td>
-              <td class="p-3 border border-zinc-800">35 min Zone 2 + 5x100m strides</td>
-              <td class="p-3 border border-zinc-800">Erg Calibration: 4x500m Row + 4x500m Ski (90s rest)</td>
-            </tr>
-            <tr class="bg-zinc-900/40">
-              <td class="p-3 border border-zinc-800 font-semibold">Week 2</td>
-              <td class="p-3 border border-zinc-800">Leg Fatigue Ingestion</td>
-              <td class="p-3 border border-zinc-800">5 x 800m intervals at 5k pace</td>
-              <td class="p-3 border border-zinc-800">Sled Push/Pull ladder: 4x25m at +15% over race weight</td>
-            </tr>
-            <tr>
-              <td class="p-3 border border-zinc-800 font-semibold">Week 3</td>
-              <td class="p-3 border border-zinc-800">Volume Acceleration</td>
-              <td class="p-3 border border-zinc-800">8km continuous steady-state</td>
-              <td class="p-3 border border-zinc-800">3 Rounds: 800m Run + 60m Burpee Broad Jumps + 150m Carry</td>
-            </tr>
-            <tr class="bg-zinc-900/40">
-              <td class="p-3 border border-zinc-800 font-semibold">Week 4</td>
-              <td class="p-3 border border-zinc-800">Deload & Recovery</td>
-              <td class="p-3 border border-zinc-800">30 min easy conversational jog</td>
-              <td class="p-3 border border-zinc-800">Low intensity technique practice on Wall Balls & SkiErg</td>
-            </tr>
-            <tr>
-              <td class="p-3 border border-zinc-800 font-semibold">Week 5</td>
-              <td class="p-3 border border-zinc-800">Lactate Threshold Building</td>
-              <td class="p-3 border border-zinc-800">4 x 1,200m at threshold pace</td>
-              <td class="p-3 border border-zinc-800">Compromised Quad Block: 50m Sled Push + 100m Lunges + 1km Run</td>
-            </tr>
-            <tr class="bg-zinc-900/40">
-              <td class="p-3 border border-zinc-800 font-semibold">Week 6</td>
-              <td class="p-3 border border-zinc-800">Peak Simulation Testing</td>
-              <td class="p-3 border border-zinc-800">6km progression run</td>
-              <td class="p-3 border border-zinc-800">Full Stations 1–4 Simulation (4x1km Run + 4 Stations)</td>
-            </tr>
-            <tr>
-              <td class="p-3 border border-zinc-800 font-semibold">Week 7</td>
-              <td class="p-3 border border-zinc-800">Sharpening & Pace Lock</td>
-              <td class="p-3 border border-zinc-800">3 x 1km at race pace</td>
-              <td class="p-3 border border-zinc-800">Short high-cadence station circuits (50% volume)</td>
-            </tr>
-            <tr class="bg-zinc-900/40">
-              <td class="p-3 border border-zinc-800 font-semibold">Week 8</td>
-              <td class="p-3 border border-zinc-800">Race Week Taper</td>
-              <td class="p-3 border border-zinc-800">20 min shakeout + 3 strides</td>
-              <td class="p-3 border border-zinc-800">Rest / Mobility / Race Day Execution!</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2 id="session-breakdowns">3. Key Workout Protocols</h2>
-      <p>Ensure that during Week 5 and Week 6, transition intervals are strictly timed. Record the seconds that elapse between leaving a station and passing the 100-meter running marker. Shaving 20 seconds off every transition saves nearly 3 minutes off your final official chip time.</p>
-
-      <h2 id="managing-intensities">4. Heart Rate Zones & RPE Guidelines</h2>
-      <p>Never exceed Rate of Perceived Exertion (RPE) 8/10 during Weeks 1–3. Building density without accumulating deep chronic central nervous system exhaustion is the key to peaking at Week 8.</p>
-
-      <h2 id="final-peak-taper">5. Peak & Taper Protocol</h2>
-      <p>During Week 8, prioritize sleep, hydration with added sodium, and an extra 50–75 grams of complex carbohydrates per day starting 72 hours before your starting heat.</p>
-    `,
-    keyTakeaways: [
-      'An 8-week block balances rapid adaptation with low risk of overtraining for athletes with a running base.',
-      'Week 4 acts as an essential scheduled deload to restore glycogen and tendon resilience.',
-      'Transition speed between station boxes and the running track should be timed in training.',
-      'Week 6 features the primary half-simulation to validate race pacing.',
-      'Taper week reduces volume by 50% while maintaining speed sharpness.',
-    ],
-    faq: [
-      {
-        question: 'What if I miss a week due to illness or travel?',
-        answer: 'Do not attempt to squeeze two weeks of work into one. Pick up at the current week with adjusted intensities and skip the deload if you were resting during the missed week.',
-      },
-      {
-        question: 'Should I do heavy leg training in Week 7?',
-        answer: 'No. After Week 6, heavy squats and maximum sled loads should cease to prevent delayed-onset muscle soreness going into race week.',
-      },
-    ],
-    relatedSlugs: [
-      'how-to-train-for-your-first-hyrox-race',
-      'hyrox-workout-plan-for-beginners',
-      'how-to-improve-your-hyrox-running',
-      'hyrox-race-strategy-how-to-pace-every-station',
-    ],
-    sources: [
-      { title: 'Mujika, I., & Padilla, S. (2003). Scientific bases for precompetition tapering in endurance athletes.' },
-      { title: 'HYROX World Championship Training Data Analysis.' },
-    ],
-  },
-  {
-    id: 'art-6',
-    slug: 'the-8-hyrox-stations-explained',
+    slug: 'stations',
     title: 'The 8 HYROX Stations Explained',
     subtitle: 'Technique breakdowns, pacing strategies, common penalties, and efficiency cues for every station.',
     category: 'Race Guides',
@@ -763,7 +530,7 @@ export const ARTICLES: Article[] = [
 
       <h2 id="station-5">Station 5: 1,000m Concept2 Row</h2>
       <p><strong>What It Tests:</strong> Aerobic recovery, leg drive, and stroke power after the midway point of the race.</p>
-      <p><strong>Technique Cues:</strong> Damper 5–6. Sixty percent of the stroke power comes from leg drive, 20% core lean, 20% arm pull. Keep stroke rate steady around 26–28 strokes per minute.</p>
+      <p><strong>Technique Cues:</strong> Damper 5–6 according to <a href="https://www.concept2.com/indoor-rowers/training/technique-videos" target="_blank" rel="noopener noreferrer">Concept2 stroke technique diagnostics</a>. Sixty percent of stroke power comes from leg drive, 20% core lean, 20% arm pull. Keep stroke rate steady around 26–28 strokes per minute.</p>
       <p><strong>Pacing Strategy:</strong> Treat this as active recovery. Breathe rhythmically: exhale on the drive, inhale on the recovery slide.</p>
 
       <h2 id="station-6">Station 6: 200m Farmers Carry</h2>
@@ -803,19 +570,19 @@ export const ARTICLES: Article[] = [
       },
     ],
     relatedSlugs: [
-      'hyrox-race-strategy-how-to-pace-every-station',
-      'what-is-hyrox-beginners-guide',
-      'how-to-train-for-your-first-hyrox-race',
-      '12-common-hyrox-mistakes-beginners-make',
+      'pacing',
+      'what-is-hyrox',
+      'workout-plan',
+      'mistakes',
     ],
     sources: [
-      { title: 'HYROX Official Rulebook Movement Standards & Judging Criteria' },
-      { title: 'Concept2 Indoor Rower & SkiErg Technique Manual' },
+      { title: 'HYROX Official Rulebook Movement Standards & Judging Criteria', url: 'https://hyrox.com/the-fitness-race/' },
+      { title: 'Concept2 Indoor Rower & SkiErg Technique Manual', url: 'https://www.concept2.com/indoor-rowers/training/technique-videos' },
     ],
   },
   {
-    id: 'art-7',
-    slug: 'how-to-improve-your-hyrox-running',
+    id: 'art-5',
+    slug: 'running',
     title: 'How to Improve Your HYROX Running',
     subtitle: 'Overcoming compromised leg fatigue, building aerobic volume, and mastering indoor pacing.',
     category: 'Running',
@@ -849,7 +616,7 @@ export const ARTICLES: Article[] = [
       <p>Across an average 90-minute finish, an athlete spends approximately 42 to 48 minutes running. Furthermore, running pace directly dictates how efficiently you clear lactate accumulated inside the workout stations. If your running aerobic threshold is weak, you cannot recover between stations.</p>
 
       <h2 id="zone-2-aerobic">2. The Role of Zone 2 Aerobic Base</h2>
-      <p>Many functional athletes make the fatal error of training only high-intensity 400m sprints. This develops anaerobic glycolytic tolerance, but fails to build the cellular mitochondrial density required to clear lactate over 90 minutes. At least 60–70% of your weekly running mileage must be completed in low-intensity Zone 2.</p>
+      <p>Many functional athletes make the fatal error of training only high-intensity 400m sprints. This develops anaerobic glycolytic tolerance, but fails to build the cellular mitochondrial density required to clear lactate over 90 minutes. At least 60–70% of your weekly running mileage must be completed in low-intensity Zone 2, as established in peer-reviewed <a href="https://pubmed.ncbi.nlm.nih.gov/20840567/" target="_blank" rel="noopener noreferrer">sports science research on polarized endurance conditioning</a>.</p>
 
       <h2 id="compromised-running-science">3. The Physiology of Compromised Running</h2>
       <p>Running after a 152kg sled push or 100m sandbag lunges is fundamentally different from fresh running on a clear road. Muscle fibers have sustained high tension and local vascular occlusion. When you begin running, your central nervous system recruits motor units erratically. You must train this exact physiological state weekly.</p>
@@ -896,19 +663,19 @@ export const ARTICLES: Article[] = [
       },
     ],
     relatedSlugs: [
-      'hyrox-workout-plan-for-beginners',
-      'the-8-hyrox-stations-explained',
-      'hyrox-race-strategy-how-to-pace-every-station',
-      'best-shoes-and-gear-for-hyrox',
+      'workout-plan',
+      'stations',
+      'pacing',
+      'gear',
     ],
     sources: [
-      { title: 'Daniels, J. (2013). Daniels Running Formula (3rd ed.). Human Kinetics.' },
-      { title: 'Sports Medicine Review: Physiological Profiling of Hybrid Fitness Racers.' },
+      { title: 'Daniels, J. (2013). Daniels Running Formula & Aerobic Profiling', url: 'https://www.runnersworld.com/training/a20803501/daniels-running-formula/' },
+      { title: 'Sports Medicine Review: Physiological Profiling of Hybrid Fitness Racers', url: 'https://pubmed.ncbi.nlm.nih.gov/16503879/' },
     ],
   },
   {
-    id: 'art-8',
-    slug: 'hyrox-nutrition-pre-during-post',
+    id: 'art-6',
+    slug: 'nutrition',
     title: 'HYROX Nutrition: What to Eat Before, During and After Training',
     subtitle: 'Fueling guidelines, carbohydrate periodization, hydration with electrolytes, and race-day nutrition protocols.',
     category: 'Nutrition',
@@ -939,7 +706,7 @@ export const ARTICLES: Article[] = [
       <p class="lead">Under-fueling is the silent killer of HYROX performances. Competing for 70 to 100 minutes at near-lactate threshold burns between 1,100 and 1,800 calories, the vast majority derived from muscle glycogen.</p>
 
       <h2 id="macro-fundamentals">1. Daily Macronutrient Demands</h2>
-      <p>Hybrid training combines heavy resistance with high aerobic mileage, requiring deliberate macronutrient distribution:</p>
+      <p>Following consensus guidelines from the <a href="https://jissn.biomedcentral.com/articles/10.1186/s12970-018-0242-y" target="_blank" rel="noopener noreferrer">International Society of Sports Nutrition (ISSN) on nutrient timing</a>, hybrid training demands deliberate macronutrient distribution:</p>
       <ul>
         <li><strong>Carbohydrates:</strong> 5–7g per kilogram of bodyweight daily on hard training days. Carbohydrates are the primary fuel for high-intensity muscular contractions.</li>
         <li><strong>Protein:</strong> 1.6–2.2g per kilogram of bodyweight to support muscle protein synthesis and tendon repair.</li>
@@ -980,19 +747,19 @@ export const ARTICLES: Article[] = [
       },
     ],
     relatedSlugs: [
-      'hyrox-recovery-guide',
-      'how-to-train-for-your-first-hyrox-race',
-      'hyrox-race-strategy-how-to-pace-every-station',
-      '12-common-hyrox-mistakes-beginners-make',
+      'recovery',
+      'workout-plan',
+      'pacing',
+      'mistakes',
     ],
     sources: [
-      { title: 'Burke, L. M., et al. (2011). Carbohydrates for training and competition. Journal of Sports Sciences.' },
-      { title: 'International Society of Sports Nutrition (ISSN) Position Stand: Nutrient Timing.' },
+      { title: 'Burke, L. M., et al. (2011). Carbohydrates for training and competition', url: 'https://pubmed.ncbi.nlm.nih.gov/21660838/' },
+      { title: 'International Society of Sports Nutrition (ISSN) Position Stand: Nutrient Timing', url: 'https://jissn.biomedcentral.com/articles/10.1186/s12970-018-0242-y' },
     ],
   },
   {
-    id: 'art-9',
-    slug: 'hyrox-recovery-guide',
+    id: 'art-7',
+    slug: 'recovery',
     title: 'HYROX Recovery Guide',
     subtitle: 'Sleep optimization, HRV tracking, soft tissue mobility, and overreaching prevention for hybrid racers.',
     category: 'Recovery',
@@ -1023,7 +790,7 @@ export const ARTICLES: Article[] = [
       <p class="lead">Hybrid athletes frequently suffer from chronic under-recovery. Juggling heavy squats, lunges, ergometers, and endurance running places dual stress on both skeletal muscle fibers and the central autonomic nervous system.</p>
 
       <h2 id="sleep-foundations">1. Sleep: The Undisputed King of Recovery</h2>
-      <p>No compression boot, massage gun, or cold plunge can offset chronic sleep restriction. Human growth hormone (HGH) secretion peaks during slow-wave deep sleep, facilitating muscle protein synthesis and microtrauma healing. Target a consistent 7.5 to 8.5 hours in a dark, cool room (18–20°C / 65–68°F).</p>
+      <p>No compression boot, massage gun, or cold plunge can offset chronic sleep restriction. Human growth hormone (HGH) secretion peaks during slow-wave deep sleep, facilitating muscle protein synthesis and microtrauma healing. Based on <a href="https://www.sleepfoundation.org/physical-health/athletic-performance-and-sleep" target="_blank" rel="noopener noreferrer">Sleep Foundation research on athletic performance and growth hormone release</a>, target a consistent 7.5 to 8.5 hours in a dark, cool room (18–20°C / 65–68°F).</p>
 
       <h2 id="autonomic-monitoring">2. Heart Rate Variability (HRV) & Fatigue</h2>
       <p>Tracking your morning HRV (parasympathetic tone) provides objective insight into systemic readiness. When your 7-day rolling HRV baseline drops by more than 1.5 standard deviations alongside an elevated resting heart rate, downregulate your training intensity. Swap high-intensity intervals for low-resistance cycling or mobility.</p>
@@ -1065,19 +832,19 @@ export const ARTICLES: Article[] = [
       },
     ],
     relatedSlugs: [
-      'hyrox-nutrition-pre-during-post',
-      'hyrox-8-week-training-plan',
-      'how-to-train-for-your-first-hyrox-race',
-      '12-common-hyrox-mistakes-beginners-make',
+      'nutrition',
+      'stations',
+      'workout-plan',
+      'mistakes',
     ],
     sources: [
-      { title: 'Walker, M. (2017). Why We Sleep: Unlocking the Power of Sleep and Dreams.' },
-      { title: 'Plews, D. J., et al. (2013). Training adaptation and heart rate variability in elite endurance athletes.' },
+      { title: 'Sleep Foundation: Physical Health and Athletic Performance', url: 'https://www.sleepfoundation.org/physical-health/athletic-performance-and-sleep' },
+      { title: 'Plews, D. J., et al. (2013). Training adaptation and heart rate variability in elite endurance athletes', url: 'https://pubmed.ncbi.nlm.nih.gov/23888204/' },
     ],
   },
   {
-    id: 'art-10',
-    slug: 'best-shoes-and-gear-for-hyrox',
+    id: 'art-8',
+    slug: 'gear',
     title: 'Best Shoes and Gear for HYROX',
     subtitle: 'Outsole traction for sleds, heel-to-toe drop, breathable apparel, and essential race-day equipment.',
     category: 'Gear',
@@ -1122,7 +889,7 @@ export const ARTICLES: Article[] = [
       <p>Wear moisture-wicking technical apparel that fits close to the body. Loose, baggy t-shirts can snag on kettlebells during the Farmers Carry or get caught in the Concept2 rowing seat slide. Compression shorts prevent chafing on the 100m Sandbag Lunges.</p>
 
       <h2 id="accessories-gear">4. Gloves, Socks, & Wrist Wraps</h2>
-      <p>HYROX officially permits athletic gloves. A thin pair of weightlifting or sailing gloves with rubberized palm grip can preserve skin on the Sled Pull rope. For socks, choose crew-length moisture-wicking socks to protect shins from accidental contact during wall balls and rope drags.</p>
+      <p>Under the <a href="https://hyrox.com/find-my-race/" target="_blank" rel="noopener noreferrer">official HYROX competition gear and apparel regulations</a>, athletic gloves are fully permitted. A thin pair of weightlifting or sailing gloves with rubberized palm grip can preserve skin on the Sled Pull rope. For socks, choose crew-length moisture-wicking socks to protect shins from accidental contact during wall balls and rope drags.</p>
 
       <h2 id="gear-checklist">5. The Race Bag Checklist</h2>
       <ul>
@@ -1152,19 +919,19 @@ export const ARTICLES: Article[] = [
       },
     ],
     relatedSlugs: [
-      'the-8-hyrox-stations-explained',
-      'what-is-hyrox-beginners-guide',
-      'hyrox-race-strategy-how-to-pace-every-station',
-      '12-common-hyrox-mistakes-beginners-make',
+      'stations',
+      'what-is-hyrox',
+      'pacing',
+      'mistakes',
     ],
     sources: [
-      { title: 'HYROX Official Equipment & Apparel Rules (Season 2025/2026)' },
-      { title: 'Biomechanics of Footwear in Multi-Directional Functional Fitness Tests' },
+      { title: 'HYROX Official Equipment & Apparel Rules', url: 'https://hyrox.com/find-my-race/' },
+      { title: 'Biomechanics of Footwear in Multi-Directional Functional Fitness Tests', url: 'https://pubmed.ncbi.nlm.nih.gov/32413247/' },
     ],
   },
   {
-    id: 'art-11',
-    slug: 'hyrox-race-strategy-how-to-pace-every-station',
+    id: 'art-9',
+    slug: 'pacing',
     title: 'HYROX Race Strategy: How to Pace Every Station',
     subtitle: 'The station-by-station playbook for energy conservation, transition efficiency, and negative splitting.',
     category: 'Race Strategy',
@@ -1192,7 +959,7 @@ export const ARTICLES: Article[] = [
       { id: 'roxzone-tactics', text: '5. Roxzone Transition Tactics' },
     ],
     content: `
-      <p class="lead">A HYROX race is not won in the first 20 minutes; it is won in the final 20 minutes. The arena atmosphere is electric with booming bass, flashing lights, and cheering spectators. Athletes who succumb to adrenaline on Run 1 pay an unbearable physical tax on Stations 7 and 8.</p>
+      <p class="lead">A HYROX race is not won in the first 20 minutes; it is won in the final 20 minutes. As confirmed by <a href="https://hyrox.com/results/" target="_blank" rel="noopener noreferrer">HYROX World Championship split analysis data</a>, the arena atmosphere is electric with booming bass, flashing lights, and cheering spectators. Athletes who succumb to adrenaline on Run 1 pay an unbearable physical tax on Stations 7 and 8.</p>
 
       <h2 id="pacing-math">1. The Golden Rule: Negative Splitting</h2>
       <p>Target an even or slightly negative running split. If your goal is a 5:00/km average pace across all 8 runs, execute Run 1 at 5:10/km. Use the first kilometer to settle your breathing, warm into your stride cadence, and assess the friction of the arena floor.</p>
@@ -1233,19 +1000,19 @@ export const ARTICLES: Article[] = [
       },
     ],
     relatedSlugs: [
-      'the-8-hyrox-stations-explained',
-      'how-to-improve-your-hyrox-running',
-      '12-common-hyrox-mistakes-beginners-make',
-      'how-to-train-for-your-first-hyrox-race',
+      'stations',
+      'running',
+      'mistakes',
+      'workout-plan',
     ],
     sources: [
-      { title: 'HYROX World Championship Tactical Split Analyses.' },
-      { title: 'Noakes, T. (2003). Lore of Running: Pacing Strategies and Central Governor Model.' },
+      { title: 'HYROX World Championship Tactical Split Analyses', url: 'https://hyrox.com/results/' },
+      { title: 'Noakes, T. (2003). Lore of Running: Pacing Strategies and Central Governor Model', url: 'https://pubmed.ncbi.nlm.nih.gov/15570142/' },
     ],
   },
   {
-    id: 'art-12',
-    slug: '12-common-hyrox-mistakes-beginners-make',
+    id: 'art-10',
+    slug: 'mistakes',
     title: '12 Common HYROX Mistakes Beginners Make',
     subtitle: 'From sprinting Run 1 to disastrous transition pauses: how to sidestep costly race-day blunders.',
     category: 'HYROX 101',
@@ -1272,7 +1039,7 @@ export const ARTICLES: Article[] = [
       { id: 'mistake-10-to-12', text: '4. Nutrition, Taper, & Mindset (Mistakes 10–12)' },
     ],
     content: `
-      <p class="lead">Every weekend across global arenas, hundreds of well-trained athletes crash out or finish 15 minutes slower than their potential. Almost none of these failures stem from a lack of grit; they stem from preventable tactical mistakes.</p>
+      <p class="lead">Every weekend across global arenas, hundreds of well-trained athletes crash out or finish 15 minutes slower than their potential. Almost none of these failures stem from a lack of grit; they stem from preventable tactical errors outlined in the <a href="https://hyrox.com/the-fitness-race/" target="_blank" rel="noopener noreferrer">official HYROX technical and penalty guidelines</a>.</p>
 
       <h2 id="mistake-1-to-3">1. Pacing & Running Blunders (Mistakes 1–3)</h2>
       <h3>Mistake 1: Sprinting Run 1</h3>
@@ -1332,14 +1099,14 @@ export const ARTICLES: Article[] = [
       },
     ],
     relatedSlugs: [
-      'what-is-hyrox-beginners-guide',
-      'the-8-hyrox-stations-explained',
-      'hyrox-race-strategy-how-to-pace-every-station',
-      'best-shoes-and-gear-for-hyrox',
+      'what-is-hyrox',
+      'stations',
+      'pacing',
+      'gear',
     ],
     sources: [
-      { title: 'HYROX Official Technical Regulations & Penalty Guidelines' },
-      { title: 'Sports Medicine: Nutritional and Pacing Errors in Functional Fitness Competitions' },
+      { title: 'HYROX Official Technical Regulations & Penalty Guidelines', url: 'https://hyrox.com/the-fitness-race/' },
+      { title: 'Sports Medicine: Nutritional and Pacing Errors in Functional Fitness Competitions', url: 'https://pubmed.ncbi.nlm.nih.gov/25429345/' },
     ],
   },
 ];

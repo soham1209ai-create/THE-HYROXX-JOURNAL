@@ -78,6 +78,18 @@
   font-weight: 600;
 }
 
+.prose-editorial a {
+  color: #FFE600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.prose-editorial a:hover {
+  color: #FACC15;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
