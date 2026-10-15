@@ -321,7 +321,7 @@ export default function App() {
                   <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl aspect-[4/3] lg:aspect-[5/4] bg-zinc-900 group">
                     <img
                       src={HERO_ARENA_IMAGE}
-                      alt="HYROX competitor pushing sled in arena"
+                      alt="HYROX competitor pushing heavy sled across indoor arena turf in standardized fitness race"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />

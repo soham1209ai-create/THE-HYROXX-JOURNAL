@@ -1,4 +1,5 @@
 import { Article, Category } from '../types';
+import heroArenaImg from '../assets/images/hero_hyrox_arena.jpg';
 
 interface SeoProps {
   title: string;
@@ -10,7 +11,7 @@ interface SeoProps {
 }
 
 const SITE_NAME = 'The HYROX Journal';
-const DEFAULT_IMAGE = '/images/hero_hyrox_arena.jpg';
+const DEFAULT_IMAGE = heroArenaImg;
 
 export function updatePageSeo({
   title,

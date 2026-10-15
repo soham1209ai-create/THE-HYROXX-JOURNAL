@@ -25,7 +25,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
           {!imageError ? (
             <img
               src={article.heroImage}
-              alt={article.title}
+              alt={article.imageAlt || article.title}
               referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -95,7 +95,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
           {!imageError ? (
             <img
               src={article.heroImage}
-              alt={article.title}
+              alt={article.imageAlt || article.title}
               referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -128,7 +128,7 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
         {!imageError ? (
           <img
             src={article.heroImage}
-            alt={article.title}
+            alt={article.imageAlt || article.title}
             referrerPolicy="no-referrer"
             onError={() => setImageError(true)}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

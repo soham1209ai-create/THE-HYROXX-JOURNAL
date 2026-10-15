@@ -167,7 +167,7 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
         <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 mb-12 bg-zinc-900">
           <img
             src={article.heroImage}
-            alt={article.title}
+            alt={article.imageAlt || article.title}
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover"
           />

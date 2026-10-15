@@ -38,6 +38,7 @@ export interface Article {
   date: string;
   readingTime: string;
   heroImage: string;
+  imageAlt?: string;
   isFeatured?: boolean;
   isEditorsPick?: boolean;
   isTrending?: boolean;

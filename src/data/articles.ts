@@ -1,15 +1,26 @@
 import { Article } from '../types';
 
-export const HERO_ARENA_IMAGE = '/images/hero_hyrox_arena.jpg';
-export const RUNNING_TRACK_IMAGE = '/images/hyrox_running_track.jpg';
-export const SLED_PUSH_IMAGE = '/images/hyrox_sled_push.jpg';
-export const SKIERG_IMAGE = '/images/hyrox_skierg_training.jpg';
-export const NUTRITION_FUEL_IMAGE = '/images/hyrox_nutrition_fuel.jpg';
-export const RECOVERY_MOBILITY_IMAGE = '/images/hyrox_recovery_mobility.jpg';
-export const SHOES_GEAR_IMAGE = '/images/hyrox_shoes_gear.jpg';
-export const ROWING_STATION_IMAGE = '/images/hyrox_rowing_station.jpg';
-export const SANDBAG_LUNGES_IMAGE = '/images/hyrox_sandbag_lunges.jpg';
-export const WALL_BALLS_IMAGE = '/images/hyrox_wall_balls.jpg';
+import heroArenaImg from '../assets/images/hero_hyrox_arena.jpg';
+import runningTrackImg from '../assets/images/hyrox_running_track.jpg';
+import sledPushImg from '../assets/images/hyrox_sled_push.jpg';
+import skiergImg from '../assets/images/hyrox_skierg_training.jpg';
+import nutritionFuelImg from '../assets/images/hyrox_nutrition_fuel.jpg';
+import recoveryMobilityImg from '../assets/images/hyrox_recovery_mobility.jpg';
+import shoesGearImg from '../assets/images/hyrox_shoes_gear.jpg';
+import rowingStationImg from '../assets/images/hyrox_rowing_station.jpg';
+import sandbagLungesImg from '../assets/images/hyrox_sandbag_lunges.jpg';
+import wallBallsImg from '../assets/images/hyrox_wall_balls.jpg';
+
+export const HERO_ARENA_IMAGE = heroArenaImg;
+export const RUNNING_TRACK_IMAGE = runningTrackImg;
+export const SLED_PUSH_IMAGE = sledPushImg;
+export const SKIERG_IMAGE = skiergImg;
+export const NUTRITION_FUEL_IMAGE = nutritionFuelImg;
+export const RECOVERY_MOBILITY_IMAGE = recoveryMobilityImg;
+export const SHOES_GEAR_IMAGE = shoesGearImg;
+export const ROWING_STATION_IMAGE = rowingStationImg;
+export const SANDBAG_LUNGES_IMAGE = sandbagLungesImg;
+export const WALL_BALLS_IMAGE = wallBallsImg;
 
 export const ARTICLES: Article[] = [
   {
@@ -27,6 +38,7 @@ export const ARTICLES: Article[] = [
     date: 'Oct 04, 2026',
     readingTime: '9 min read',
     heroImage: HERO_ARENA_IMAGE,
+    imageAlt: 'HYROX indoor competition arena with athletes competing in the 8km running and functional workout station sequence',
     metaTitle: 'What Is HYROX? The Complete Beginner Race Guide (2026)',
     metaDescription: 'Discover what is HYROX: the premier 8x1km hyrox race structure, division standards, workout stations, and official hyrox events preparation.',
     primaryKeyword: 'what is hyrox',
@@ -236,6 +248,7 @@ export const ARTICLES: Article[] = [
     date: 'Sep 28, 2026',
     readingTime: '8 min read',
     heroImage: SKIERG_IMAGE,
+    imageAlt: 'HYROX workout plan training session showing an athlete performing powerful double-pole pulls on a Concept2 SkiErg',
     metaTitle: 'HYROX Workout Plan: 4-Week Beginner Training Guide (2026)',
     metaDescription: 'Follow our proven hyrox workout plan: a structured 4-week hyrox training plan and hyrox workout for beginners balancing compromised running and station drills.',
     primaryKeyword: 'hyrox workout plan',
@@ -367,6 +380,7 @@ export const ARTICLES: Article[] = [
     date: 'Sep 21, 2026',
     readingTime: '7 min read',
     heroImage: WALL_BALLS_IMAGE,
+    imageAlt: 'Athlete executing high-target wall ball shots demonstrating HYROX vs CrossFit movement standards and stamina',
     metaTitle: 'HYROX vs CrossFit: Demands, Formats & Key Differences (2026)',
     metaDescription: 'Unpack the core hyrox vs crossfit differences: aerobic capacity vs high-skill power, race predictability, and how to choose hyrox or crossfit.',
     primaryKeyword: 'hyrox vs crossfit',
@@ -491,6 +505,7 @@ export const ARTICLES: Article[] = [
     date: 'Sep 02, 2026',
     readingTime: '12 min read',
     heroImage: SLED_PUSH_IMAGE,
+    imageAlt: 'Athlete driving heavy weighted sled push across indoor competition turf at HYROX station two',
     metaTitle: 'The 8 HYROX Stations Explained: Technique, Pacing & Weights',
     metaDescription: 'Comprehensive guide to all 8 HYROX workout stations: SkiErg, Sled Push, Sled Pull, Burpee Broad Jumps, Row, Farmers Carry, Lunges, Wall Balls.',
     primaryKeyword: '8 hyrox stations explained',
@@ -598,6 +613,7 @@ export const ARTICLES: Article[] = [
     date: 'Aug 26, 2026',
     readingTime: '9 min read',
     heroImage: RUNNING_TRACK_IMAGE,
+    imageAlt: 'Athletes pacing on the 1000m running track during compromised running intervals in a HYROX race',
     metaTitle: 'How to Improve Your HYROX Running: Compromised Leg Pacing',
     metaDescription: 'Master compromised running in HYROX. Build your Zone 2 aerobic engine, navigate tight indoor arena turns, and avoid heavy leg burnout.',
     primaryKeyword: 'improve hyrox running',
@@ -691,6 +707,7 @@ export const ARTICLES: Article[] = [
     date: 'Aug 19, 2026',
     readingTime: '8 min read',
     heroImage: NUTRITION_FUEL_IMAGE,
+    imageAlt: 'HYROX nutrition fueling essentials including isotonic electrolyte drinks, hydration flasks, and energy carb gels',
     metaTitle: 'HYROX Nutrition: What to Eat Before, During and After Racing',
     metaDescription: 'Evidence-based HYROX sports nutrition: carbohydrate loading, 500-800mg sodium electrolyte strategies, and race morning fueling.',
     primaryKeyword: 'hyrox nutrition',
@@ -775,6 +792,7 @@ export const ARTICLES: Article[] = [
     date: 'Aug 11, 2026',
     readingTime: '8 min read',
     heroImage: RECOVERY_MOBILITY_IMAGE,
+    imageAlt: 'Athlete performing post-HYROX recovery routine with foam roller and mobility exercises for leg muscles',
     metaTitle: 'HYROX Recovery Guide: Sleep, HRV, Mobility & Tendon Health',
     metaDescription: 'Essential recovery protocols for hybrid athletes: deep sleep optimization, heart rate variability monitoring, and daily mobility drills.',
     primaryKeyword: 'hyrox recovery guide',
@@ -860,6 +878,7 @@ export const ARTICLES: Article[] = [
     date: 'Jul 29, 2026',
     readingTime: '7 min read',
     heroImage: SHOES_GEAR_IMAGE,
+    imageAlt: 'Best footwear and gear for HYROX showing turf-grip running shoes, performance socks, and workout essentials',
     metaTitle: 'Best Shoes and Gear for HYROX: Turf Grip & Running Cushion',
     metaDescription: 'What to look for in HYROX shoes: rubber outsole turf traction, 4-8mm drop, running cushioning, and race bag essentials.',
     primaryKeyword: 'best shoes for hyrox',
@@ -947,6 +966,7 @@ export const ARTICLES: Article[] = [
     date: 'Jul 15, 2026',
     readingTime: '11 min read',
     heroImage: ROWING_STATION_IMAGE,
+    imageAlt: 'Athlete maintaining steady 500m split pace on Concept2 indoor rower at HYROX station five',
     metaTitle: 'HYROX Race Strategy: How to Pace Every Station & Split',
     metaDescription: 'Tactical station-by-station pacing playbook: Run 1 negative splitting, unbroken sled push momentum, and Roxzone transit speed.',
     primaryKeyword: 'hyrox race strategy pacing',
@@ -1028,6 +1048,7 @@ export const ARTICLES: Article[] = [
     date: 'Jul 04, 2026',
     readingTime: '10 min read',
     heroImage: SANDBAG_LUNGES_IMAGE,
+    imageAlt: 'Athlete performing 100m sandbag walking lunges with correct upright posture to avoid common HYROX rookie mistakes',
     metaTitle: '12 Common HYROX Mistakes Beginners Make & How to Avoid Them',
     metaDescription: 'Sidestep the 12 most frequent HYROX rookie blunders: sprinting the opening run, poor shoe selection, and unpracticed nutrition.',
     primaryKeyword: 'hyrox mistakes beginners',
