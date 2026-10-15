@@ -51,6 +51,7 @@ export interface Article {
   metaTitle?: string;
   metaDescription?: string;
   primaryKeyword?: string;
+  secondaryKeywords?: string[];
 }
 
 export interface TrainingLevelInput {

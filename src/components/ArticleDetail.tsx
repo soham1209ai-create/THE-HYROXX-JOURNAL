@@ -131,11 +131,28 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
             {article.title}
           </h1>
 
-          <p className="text-zinc-300 text-lg sm:text-xl font-normal leading-relaxed max-w-3xl mb-6">
+          <p className="text-zinc-300 text-lg sm:text-xl font-normal leading-relaxed max-w-3xl mb-4">
             {article.subtitle}
           </p>
 
-          <div className="flex items-center gap-3 pt-6 border-t border-white/10 text-xs text-zinc-400">
+          {/* Target SEO Keywords Banner */}
+          {(article.primaryKeyword || (article.secondaryKeywords && article.secondaryKeywords.length > 0)) && (
+            <div className="flex flex-wrap items-center gap-2 mb-6 p-3 rounded-lg bg-zinc-900/60 border border-white/10 text-xs">
+              <span className="font-mono text-zinc-400 uppercase text-[11px] tracking-wider">Search Focus:</span>
+              {article.primaryKeyword && (
+                <span className="inline-flex items-center px-2.5 py-1 rounded bg-[#FFE600]/15 text-[#FFE600] border border-[#FFE600]/30 font-bold uppercase text-[11px] tracking-wider">
+                  Main: {article.primaryKeyword}
+                </span>
+              )}
+              {article.secondaryKeywords?.map((kw, i) => (
+                <span key={i} className="inline-flex items-center px-2.5 py-1 rounded bg-zinc-800 text-zinc-200 border border-white/10 font-medium text-[11px]">
+                  + {kw}
+                </span>
+              ))}
+            </div>
+          )}
+
+          <div className="flex items-center gap-3 pt-4 border-t border-white/10 text-xs text-zinc-400">
             <div className="w-9 h-9 rounded-full bg-zinc-800 border border-white/10 flex items-center justify-center text-white font-bold font-display uppercase">
               {article.author.name.charAt(0)}
             </div>

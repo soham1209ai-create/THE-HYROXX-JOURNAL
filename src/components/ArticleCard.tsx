@@ -53,9 +53,23 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
               {article.title}
             </h2>
 
-            <p className="text-zinc-400 text-sm leading-relaxed line-clamp-3 mb-6">
+            <p className="text-zinc-400 text-sm leading-relaxed line-clamp-3 mb-4">
               {article.excerpt}
             </p>
+
+            {article.primaryKeyword && (
+              <div className="flex flex-wrap items-center gap-1.5 mb-5">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500">Key:</span>
+                <span className="text-[11px] font-mono text-[#FFE600] bg-[#FFE600]/10 border border-[#FFE600]/25 px-2 py-0.5 rounded font-medium">
+                  #{article.primaryKeyword}
+                </span>
+                {article.secondaryKeywords?.slice(0, 2).map((kw, i) => (
+                  <span key={i} className="text-[11px] text-zinc-300 bg-zinc-900 border border-white/10 px-2 py-0.5 rounded font-normal">
+                    {kw}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="flex items-center justify-between pt-4 border-t border-white/10 text-xs">
@@ -144,6 +158,14 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({
           <p className="text-zinc-400 text-xs sm:text-sm line-clamp-2 leading-relaxed">
             {article.excerpt}
           </p>
+
+          {article.primaryKeyword && (
+            <div className="mt-2.5 flex items-center gap-1.5">
+              <span className="text-[10px] font-mono text-[#FFE600] bg-[#FFE600]/10 border border-[#FFE600]/20 px-2 py-0.5 rounded font-medium">
+                #{article.primaryKeyword}
+              </span>
+            </div>
+          )}
         </div>
 
         <div className="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs text-zinc-500">

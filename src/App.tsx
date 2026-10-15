@@ -148,8 +148,8 @@ export default function App() {
         window.history.pushState({ type: 'home' }, '', '/');
       }
       updatePageSeo({
-        title: 'The HYROX Journal – Train Smarter. Race Stronger.',
-        description: 'Premium editorial publication and training authority on HYROX racing, programming, station strategy, nutrition, and recovery.',
+        title: 'HYROX — “Train Smarter. Race Stronger.” | The Official Journal',
+        description: 'Discover HYROX: the global fitness race. Master your hyrox training and build your ultimate hyrox workout plan with sports science and station pacing.',
         canonicalPath: '/',
         type: 'website',
       });
@@ -255,14 +255,30 @@ export default function App() {
                     <span>The Premier HYROX Performance Journal</span>
                   </div>
 
-                  <h1 className="font-display uppercase text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tight mb-6">
-                    Train Smarter. <br />
-                    <span className="text-white">Race Stronger.</span>
+                  <h1 className="font-display uppercase text-6xl sm:text-7xl lg:text-9xl font-black text-white leading-[0.9] tracking-tight mb-4">
+                    <span className="text-[#FFE600] block">HYROX</span>
+                    <span className="text-white text-2xl sm:text-4xl lg:text-5xl font-extrabold normal-case font-display tracking-tight block mt-3">
+                      “Train Smarter. Race Stronger.”
+                    </span>
                   </h1>
 
-                  <p className="text-zinc-300 text-lg sm:text-xl font-normal leading-relaxed max-w-xl mb-8">
-                    Your practical guide to HYROX training, racing, nutrition and performance. Tested strategies and sports science for hybrid endurance athletes.
+                  <p className="text-zinc-300 text-lg sm:text-xl font-normal leading-relaxed max-w-xl mb-4">
+                    The definitive performance publication for <strong className="text-white font-semibold underline decoration-[#FFE600] decoration-2 underline-offset-4">hyrox training</strong> and structured <strong className="text-white font-semibold underline decoration-[#FFE600] decoration-2 underline-offset-4">hyrox workout</strong> preparation. Tested race strategies, station pacing, and sports science for hybrid athletes.
                   </p>
+
+                  {/* Visible Focus Keywords for Homepage */}
+                  <div className="flex flex-wrap items-center gap-2 mb-8">
+                    <span className="text-xs uppercase font-mono tracking-wider text-zinc-400">Search Focus:</span>
+                    <span className="inline-flex items-center px-2.5 py-1 rounded bg-[#FFE600]/15 border border-[#FFE600]/30 text-[#FFE600] text-xs font-bold uppercase tracking-wider">
+                      Main: HYROX
+                    </span>
+                    <span className="inline-flex items-center px-2.5 py-1 rounded bg-zinc-800 text-zinc-200 border border-white/10 text-xs font-medium">
+                      + hyrox training
+                    </span>
+                    <span className="inline-flex items-center px-2.5 py-1 rounded bg-zinc-800 text-zinc-200 border border-white/10 text-xs font-medium">
+                      + hyrox workout
+                    </span>
+                  </div>
 
                   <div className="flex flex-wrap items-center gap-4">
                     <button

@@ -15,11 +15,11 @@ export const ARTICLES: Article[] = [
   {
     id: 'art-1',
     slug: 'what-is-hyrox',
-    title: 'What Is HYROX? The Complete Beginner’s Guide',
-    subtitle: 'Everything you need to know about race format, the eight stations, divisions, and preparation standards.',
+    title: 'What Is HYROX? The Complete Guide & Race Format',
+    subtitle: 'The definitive breakdown of the global HYROX race. Learn how official HYROX events are organized, the 8x1km running sequence, functional station weights, and division rules.',
     category: 'HYROX 101',
     tags: ['Beginners', 'Race Format', 'Hyrox 101', 'Stations', 'Divisions'],
-    excerpt: 'An authoritative introduction to the world’s fastest-growing fitness race. Discover the 8x1km running framework, official equipment weights, divisions, and realistic training timelines.',
+    excerpt: 'An authoritative beginner guide to the global HYROX race. Learn how official HYROX events work, the 8x1km running framework, equipment weights, divisions, and realistic training timelines.',
     author: {
       name: 'Marcus Vance',
       role: 'Head of Performance Editorial',
@@ -28,8 +28,9 @@ export const ARTICLES: Article[] = [
     readingTime: '9 min read',
     heroImage: HERO_ARENA_IMAGE,
     metaTitle: 'What Is HYROX? The Complete Beginner Race Guide (2026)',
-    metaDescription: 'An authoritative beginner guide to HYROX: the 8x1km race structure, official division weights, eight workout stations, and training timelines.',
+    metaDescription: 'Discover what is HYROX: the premier 8x1km hyrox race structure, division standards, workout stations, and official hyrox events preparation.',
     primaryKeyword: 'what is hyrox',
+    secondaryKeywords: ['hyrox race', 'hyrox events'],
     isFeatured: true,
     isEditorsPick: true,
     isTrending: true,
@@ -44,7 +45,7 @@ export const ARTICLES: Article[] = [
       { id: 'common-pitfalls', text: '7. Beginner Pitfalls to Avoid' },
     ],
     content: `
-      <p class="lead">Founded in Germany in 2017 by race director Christian Toetzke and Olympic hockey gold medalist Moritz Fürste, HYROX was engineered around a simple premise as codified in the <a href="https://hyrox.com/the-fitness-race/" target="_blank" rel="noopener noreferrer">official HYROX Rulebook and competition standards</a>: create the world’s first mass-participation indoor fitness race where every athlete on Earth completes the identical test.</p>
+      <p class="lead">Founded in Germany in 2017 by race director Christian Toetzke and Olympic hockey gold medalist Moritz Fürste, <strong>HYROX</strong> was engineered around a simple premise as codified in the <a href="https://hyrox.com/the-fitness-race/" target="_blank" rel="noopener noreferrer">official HYROX Rulebook and competition standards</a>: create the world’s first mass-participation indoor fitness race where every athlete on Earth completes the identical test.</p>
 
       <h2 id="origin-format">1. What Is HYROX & How Does It Work?</h2>
       <p>Unlike traditional CrossFit competitions where workouts are announced minutes before "3-2-1 Go", HYROX is standardized. The race never changes. Whether you compete in Manchester, Chicago, Sydney, or Vienna, the order of events, distances, and movement criteria are 100% constant. This consistency allows athletes to track global rankings, benchmark seasonal progress, and aim for personal bests in the exact manner marathoners measure 42.195 kilometers.</p>
@@ -223,11 +224,11 @@ export const ARTICLES: Article[] = [
   {
     id: 'art-2',
     slug: 'workout-plan',
-    title: 'HYROX Workout Plan for Beginners',
-    subtitle: 'A progressive 4-week blueprint balancing aerobic base building, compromised running, and station resilience.',
+    title: 'HYROX Workout Plan: 4-Week Beginner Training Guide',
+    subtitle: 'A proven 4-week HYROX training plan balancing aerobic volume and station resilience. Follow this progressive HYROX workout for beginners to build compromised running endurance without burnout.',
     category: 'Workouts',
     tags: ['Workout Plan', 'Beginners', 'Training', 'Weekly Schedule', 'Hybrid'],
-    excerpt: 'Step-by-step 4-week structured template for your first race. Learn how to sequence running, functional strength, ergometers, and dedicated recovery days.',
+    excerpt: 'Step-by-step 4-week structured hyrox training plan for your first race. Master this complete hyrox workout for beginners balancing compromised running, sleds, ergs, and recovery.',
     author: {
       name: 'Dr. Elena Rostova',
       role: 'Exercise Physiologist & Hybrid Coach',
@@ -235,9 +236,10 @@ export const ARTICLES: Article[] = [
     date: 'Sep 28, 2026',
     readingTime: '8 min read',
     heroImage: SKIERG_IMAGE,
-    metaTitle: 'HYROX Workout Plan for Beginners: 4-Week Blueprint',
-    metaDescription: 'Practical 4-week beginner plan balancing Zone 2 running, functional strength, ergometer intervals, and compromised leg endurance.',
-    primaryKeyword: 'hyrox workout plan beginners',
+    metaTitle: 'HYROX Workout Plan: 4-Week Beginner Training Guide (2026)',
+    metaDescription: 'Follow our proven hyrox workout plan: a structured 4-week hyrox training plan and hyrox workout for beginners balancing compromised running and station drills.',
+    primaryKeyword: 'hyrox workout plan',
+    secondaryKeywords: ['hyrox training plan', 'hyrox workout for beginners'],
     isFeatured: false,
     isEditorsPick: true,
     isTrending: false,
@@ -353,11 +355,11 @@ export const ARTICLES: Article[] = [
   {
     id: 'art-3',
     slug: 'hyrox-vs-crossfit',
-    title: 'HYROX vs CrossFit: What’s the Difference?',
-    subtitle: 'A detailed breakdown of competition formats, movement complexity, aerobic demands, and athlete profiles.',
+    title: 'HYROX vs CrossFit: Demands, Formats & Key Differences',
+    subtitle: 'An in-depth breakdown of the fundamental HYROX vs CrossFit differences. Understand aerobic endurance, technical skill barriers, and whether HYROX or CrossFit best fits your athletic goals.',
     category: 'HYROX 101',
     tags: ['CrossFit', 'Comparison', 'Accessibility', 'Endurance', 'Skill Demands'],
-    excerpt: 'Comparing the two titans of functional fitness. Understand how HYROX’s predictable endurance tests differ from CrossFit’s high-skill gymnastics and Olympic weightlifting.',
+    excerpt: 'Comparing the two fitness giants: analyze key hyrox vs crossfit differences in aerobic capacity, movement complexity, and decide whether hyrox or crossfit is right for you.',
     author: {
       name: 'Marcus Vance',
       role: 'Head of Performance Editorial',
@@ -365,9 +367,10 @@ export const ARTICLES: Article[] = [
     date: 'Sep 21, 2026',
     readingTime: '7 min read',
     heroImage: WALL_BALLS_IMAGE,
-    metaTitle: 'HYROX vs CrossFit: Key Differences & Comparison (2026)',
-    metaDescription: 'Compare HYROX vs CrossFit: race predictability, aerobic oxidative endurance vs anaerobic power, skill barrier, and athlete suitability.',
+    metaTitle: 'HYROX vs CrossFit: Demands, Formats & Key Differences (2026)',
+    metaDescription: 'Unpack the core hyrox vs crossfit differences: aerobic capacity vs high-skill power, race predictability, and how to choose hyrox or crossfit.',
     primaryKeyword: 'hyrox vs crossfit',
+    secondaryKeywords: ['hyrox vs crossfit differences', 'hyrox or crossfit'],
     isFeatured: false,
     isEditorsPick: false,
     isTrending: true,

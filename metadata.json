@@ -1,6 +1,6 @@
 {
   "name": "The HYROX Journal",
-  "description": "Premium editorial publication and training authority on HYROX racing, programming, station strategy, nutrition, and recovery.",
+  "description": "Discover HYROX: master your hyrox training and execute the ultimate hyrox workout plan with sports science and station pacing.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
